@@ -544,7 +544,7 @@ class product
       //Function shows product data in tabular form
       void showall(int c)
       {
-            cout<<"  "<<prodid<<setw(15)<<name<<setw(11)<<company<<setw(11)<<"Rs."<<price<<setw(10)<<qty<<setw(13)<<dis<<"%"<<endl;
+            cout<<"  "<<prodid<<setw(15)<<name<<setw(11)<<company<<setw(11)<<"Tk."<<price<<setw(10)<<qty<<setw(13)<<dis<<"%"<<endl;
       }
       int retpno()
       {
@@ -835,7 +835,7 @@ void place_order()
             {
                   amt=o1[x].qty1*o1[x].price1;
                   damt=amt-o1[x].dis1;
-                  cout<<"  "<<ptx[x]<<setw(10)<<o1[x].pname1<<setw(9)<<o1[x].qty1<<setw(12)<<"Rs."<<o1[x].price1<<setw(10)<<"Rs."<<amt<<setw(14)<<"Rs."<<damt<<endl;
+                  cout<<"  "<<ptx[x]<<setw(10)<<o1[x].pname1<<setw(9)<<o1[x].qty1<<setw(12)<<"Tk."<<o1[x].price1<<setw(10)<<"Tk."<<amt<<setw(14)<<"Tk."<<damt<<endl;
                   total+=damt;
                    //ttaxt+=o1[x].tax1;
                   yy++;
@@ -843,21 +843,21 @@ void place_order()
              ttaxt=18;
              cout<<"\n-------------------------------------------------------------------------"<<endl;
              yy++;
-             cout<<"\n		  TOTAL AMOUNT     :   "<<"Rs."<<total<<endl;
+             cout<<"\n		  TOTAL AMOUNT     :   "<<"Tk."<<total<<endl;
              yy++;
-             cout<<"		  CGST             :   "<<"+"<<ttaxt/2<<"%"<<endl;
-             cout<<"		  SGST             :   "<<"+"<<ttaxt/2<<"%"<<endl;
+            //  cout<<"		  CGST             :   "<<"+"<<ttaxt/2<<"%"<<endl;
+             cout<<"		  Vat             :   "<<"+"<<ttaxt/2<<"%"<<endl;
              yy++;
              cout<<"-------------------------------------------------------------------------"<<endl;
              yy++;
-             cout<<"		  NET TOTAL        :   "<<"Rs."<<(total+((ttaxt*total)/100))<<endl;
+             cout<<"		  NET TOTAL        :   "<<"Tk."<<(total+((ttaxt*total)/100))<<endl;
              yy++;
-             cout<<"		  ROUND OFF AMOUNT :   "<<"Rs."<<setprecision(2)<<(round(total+((ttaxt*total)/100))-(total+((ttaxt*total)/100)))<<endl;
-             cout<<"		  NET AMOUNT DUE   :   "<<"Rs."<<fixed<<round(total+((ttaxt*total)/100))<<endl<<endl;
+             cout<<"		  ROUND OFF AMOUNT :   "<<"Tk."<<setprecision(2)<<(round(total+((ttaxt*total)/100))-(total+((ttaxt*total)/100)))<<endl;
+             cout<<"		  NET AMOUNT DUE   :   "<<"Tk."<<fixed<<round(total+((ttaxt*total)/100))<<endl<<endl;
              cout<<"-------------------------------------------------------------------------"<<endl;
              cout<<"		   P A Y M E N T  S U M M A R Y  "<<endl;
              cout<<"-------------------------------------------------------------------------"<<endl;
-             cout<<"		  Enter CASH value :   Rs.";
+             cout<<"		  Enter CASH value :   Tk.";
              float vb,xy;
              cin>>vb;
              xy=(vb-round(total+((ttaxt*total)/100)));
@@ -868,7 +868,7 @@ void place_order()
              }
              else
              {
-                cout<<"	     Change to be returned :   Rs."<<xy<<endl;
+                cout<<"	     Change to be returned :   Tk."<<xy<<endl;
                 changeqty(pr1,q1);
                 cout<<"-------------------------------------------------------------------------"<<endl;
              cout<<"\n\n	   WE ARE EAGERLY LOOKING FORWARD TO SERVE YOU AGAIN\n";
@@ -1278,7 +1278,7 @@ void cust_menu1()
                   mainMenu();
                   break;
             case '4':
-                  orderk=0;
+                //   orderk=0;
                   place_order();
                   break;
             default:
@@ -1489,13 +1489,13 @@ int Login()
 
             fin.close();
 
-      }   else if(x==4){
+      }   else if(x==3){
             string line;
             ifstream fin;
             int offset=0;
-            cout<<"ENTER YOUR USERNAME"<<endl;
+            cout<<"ENTER ADMIN NAME"<<endl;
             cin>>q;
-            cout<<"ENTER YOUR PASSWORD"<<endl;
+            cout<<"ENTER PASSWORD"<<endl;
             cin>>w;
             q=q+w;
             fin.open("admin.txt");
