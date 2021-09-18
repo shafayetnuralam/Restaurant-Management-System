@@ -1138,7 +1138,7 @@ void intro()
       cout<<endl;
       cout<<"========================================================================="<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
-      cout<<"****************  R E S T U R E N T  M A N A G E M E N T   *****************"<<endl;
+      cout<<"**************  R E S T U R E N T  M A N A G E M E N T  ***************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"***************************   S Y S T E M   *****************************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
@@ -1357,25 +1357,22 @@ void mainMenu(){
                   cout<<endl;
             cout<<"=============================   MAIN MENU   ============================"<<endl;
             cout<<"1. ORDER"<<endl;
-            // cout<<"2. Admin"<<endl;
-            cout<<"3. EXIT"<<endl;
+            cout<<"2. EXIT"<<endl;
             cout<<"========================================================================"<<endl;
-            cout<<"Please Select Your Option (1-3) "<<endl;
+            cout<<"Please Select Your Option (1-2) "<<endl;
             cin>>ch;
             switch(ch)
             {
                   case '1':
                         cust_menu1();
                         break;
+      
                   case '2':
-                        administratormenu();
-                        break;
-                  case '3':
                         exit(0);
                   default :
                         cout<<"Please enter valid option"<<endl;
             }
-      }while(ch!='3');
+      }while(ch!='2');
     }
 
 // Administrator menu function
@@ -1418,8 +1415,8 @@ int Login()
     cout<<endl;
       cout<<"1.REGISTER"<<endl;
       cout<<"2.LOGIN"<<endl;
-      cout<<"3.EXIT"<<endl;
-      cout<<"4.ADMIN"<<endl;
+      cout<<"3.ADMIN"<<endl;
+      cout<<"4.EXIT"<<endl;
       string p,q,w;
       int x;string s;
       cin>>x;
@@ -1527,7 +1524,7 @@ int Login()
 
    }
 
-      else if(x==3)
+      else if(x==4)
       {
             return 0;
       }
