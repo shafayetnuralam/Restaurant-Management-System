@@ -1143,7 +1143,7 @@ void intro()
       cout<<"***************************   S Y S T E M   *****************************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"PROJECT BUILT BY : "<<endl;
-      cout<<"                        Shafayet                               "<<endl;
+      cout<<"Shafayet"<<endl;
       cout<<endl;
       cout<<"========================================================================="<<endl;
       cin.get();
@@ -1344,7 +1344,8 @@ void cust_menu3()
                   cout<<"Please enter valid option"<<endl;
       }
 }
-// Function for mainmenu
+
+// Function for User mainmenu
 void mainMenu(){
      char ch;
       do
@@ -1356,7 +1357,7 @@ void mainMenu(){
                   cout<<endl;
             cout<<"=============================   MAIN MENU   ============================"<<endl;
             cout<<"1. ORDER"<<endl;
-            cout<<"2. Admin"<<endl;
+            // cout<<"2. Admin"<<endl;
             cout<<"3. EXIT"<<endl;
             cout<<"========================================================================"<<endl;
             cout<<"Please Select Your Option (1-3) "<<endl;
@@ -1376,6 +1377,7 @@ void mainMenu(){
             }
       }while(ch!='3');
     }
+
 // Administrator menu function
 void administratormenu()
 {
@@ -1411,19 +1413,20 @@ int Login()
       label:
     cout<<endl;
     cout<<"-------------------------------------------------------------------------"<<endl;
-    cout<<"*********   RESTURENT MANEGMENT SYSTEM   ***********"<<endl;
+    cout<<"*********   RESTURENT MANEGMENT SYSTEM  ***********"<<endl;
     cout<<"-------------------------------------------------------------------------"<<endl;
     cout<<endl;
       cout<<"1.REGISTER"<<endl;
       cout<<"2.LOGIN"<<endl;
       cout<<"3.EXIT"<<endl;
+      cout<<"4.ADMIN"<<endl;
       string p,q,w;
       int x;string s;
       cin>>x;
       if(x==1)
       {
                   ofstream fout;
-                  cout<<"ENTER YOUR USERNAME"<<endl;
+                  cout<<"ENTER YOUR NAME"<<endl;
                   cin>>s;
                   cout<<"ENTER YOUR PASSWORD"<<endl;
                   cin>>p;
@@ -1488,7 +1491,42 @@ int Login()
             }
 
             fin.close();
-      }
+
+      }   else if(x==4){
+            string line;
+            ifstream fin;
+            int offset=0;
+            cout<<"ENTER YOUR USERNAME"<<endl;
+            cin>>q;
+            cout<<"ENTER YOUR PASSWORD"<<endl;
+            cin>>w;
+            q=q+w;
+            fin.open("admin.txt");
+            if(fin.is_open())
+            {
+                  while(!fin.eof())
+                  {
+                        getline(fin,line);
+                        if(line.find(q,0)!=-1)
+                        {
+                              cout<<"You are logged in !!"<<endl;
+                              offset=1;
+                                    administratormenu();
+                              break;
+                }
+                  }
+                  if(offset==0)
+                  {
+                        cout<<"Sorry, You are unauthorised!!"<<endl;
+                        cout<<"Press 1 and enter, to go to Home page"<<endl;
+                        char o;
+                        cin>>o;
+                        goto label;
+                  }
+            }
+
+   }
+
       else if(x==3)
       {
             return 0;
