@@ -519,15 +519,15 @@ class product
              cout<<"PRODUCT NO      : ";
              prodid=rn1;
              cout<<prodid<<endl;
-             cout<<"NAME OF PRODUCT :"<<endl;
+             cout<<"NAME OF PRODUCT :";
              cin>>name;
-             cout<<"COMPANY         :"<<endl;
+             cout<<"COMPANY         :";
              cin>>company;
-             cout<<"PRODUCT PRICE   :"<<endl;
+             cout<<"PRODUCT PRICE   :";
              cin>>price;
-             cout<<"QUANTITY        :"<<endl;
+             cout<<"QUANTITY        :";
              cin>>qty;
-             cout<<"DISCOUNT%       :"<<endl;
+             cout<<"DISCOUNT%       :";
              cin>>dis;
              cout<<"-------------------------------------------------------------------------"<<endl;
       }
@@ -736,6 +736,7 @@ void write_book()
       fp.write((char*)&pr,sizeof(product));
       fp.close();
       cout<<"***********************  PRODUCTS RECORD SAVED  ************************"<<endl;
+      cout<<"Press any key to continue..."<<endl;
       cin.ignore();
       cin.get();
 }
@@ -928,7 +929,7 @@ void product_detail_heading()
       cout<<"========================================================================"<<endl;
       cout<<"*************************   PRODUCTS DETAILS   *************************"<<endl;
       cout<<"========================================================================"<<endl;
-      cout<<"PROD.NO"<<setw(10)<<"NAME"<<setw(13)<<"COMPANY"<<setw(12)<<"PRICE"<<setw(13)<<"QUANTITY"<<setw(15)<<"DISCOUNT"<<endl;
+      cout<<"PROD.NO"<<setw(15)<<"NAME"<<setw(15)<<"COMPANY"<<setw(15)<<"PRICE"<<setw(15)<<"QUANTITY"<<setw(15)<<"DISCOUNT"<<endl;
       cout<<"------------------------------------------------------------------------"<<endl;
 }
 //FUNCTION TO MODIFY RECORD
@@ -1450,21 +1451,24 @@ int Login()
       cout<<"2.USER"<<endl;
       cout<<"3.ADMIN"<<endl;
       cout<<"4.EXIT"<<endl;
+
+      cout<<"********* USERNAME LOGIN ***********"<<endl;
+      
       string p,q,w,a,b,c,d,e;
       int x;string s;
       cin>>x;
       if(x==1)
       {
                   ofstream fout;
-                  cout<<"ENTER YOUR USER NAME"<<endl;
+                  cout<<"ENTER YOUR USER NAME :";
                   cin>>a;
-                  cout<<"ENTER YOUR PASSWORD"<<endl;
+                  cout<<"ENTER YOUR PASSWORD :";
                   cin>>b;
-                  cout<<"ENTER YOUR Mobile No"<<endl;
+                  cout<<"ENTER YOUR Mobile No :";
                   cin>>c;
-                  cout<<"ENTER YOUR Age"<<endl;
+                  cout<<"ENTER YOUR Age :";
                   cin>>d;
-                  cout<<"ENTER YOUR Designation"<<endl;
+                  cout<<"ENTER YOUR Designation :";
                   cin>>e;
                   s= a+" "+ b +" "+ c +" "+ d +" "+ e;
                   ifstream fin;
@@ -1497,9 +1501,10 @@ int Login()
             string line;
             ifstream fin;
             int offset=0;
-            cout<<"ENTER YOUR USERNAME"<<endl;
+            cout<<"********* USERNAME LOGIN ***********"<<endl;
+            cout<<"ENTER YOUR USERNAME : ";
             cin>>q;
-            cout<<"ENTER YOUR PASSWORD"<<endl;
+            cout<<"ENTER YOUR PASSWORD :";
             cin>>w;
             
             q= q+" "+ w;
@@ -1533,9 +1538,10 @@ int Login()
             string line;
             ifstream fin;
             int offset=0;
-            cout<<"ENTER ADMIN NAME"<<endl;
+            cout<<"*********  ADMIN LOGIN  ***********"<<endl;
+            cout<<"ENTER ADMIN NAME : ";
             cin>>q;
-            cout<<"ENTER PASSWORD"<<endl;
+            cout<<"ENTER PASSWORD : ";
             cin>>w;
             q=q+" "+ w;
             fin.open("admin.txt");
