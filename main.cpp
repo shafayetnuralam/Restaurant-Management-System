@@ -1443,20 +1443,26 @@ int Login()
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<endl;
       cout<<"1.REGISTER"<<endl;
-      cout<<"2.LOGIN"<<endl;
+      cout<<"2.USER"<<endl;
       cout<<"3.ADMIN"<<endl;
       cout<<"4.EXIT"<<endl;
-      string p,q,w;
+      string p,q,w,a,b,c,d,e;
       int x;string s;
       cin>>x;
       if(x==1)
       {
                   ofstream fout;
                   cout<<"ENTER YOUR USER NAME"<<endl;
-                  cin>>s;
+                  cin>>a;
                   cout<<"ENTER YOUR PASSWORD"<<endl;
-                  cin>>p;
-                  s=s+p;
+                  cin>>b;
+                  cout<<"ENTER YOUR Mobile No"<<endl;
+                  cin>>c;
+                  cout<<"ENTER YOUR Age"<<endl;
+                  cin>>d;
+                  cout<<"ENTER YOUR Designation"<<endl;
+                  cin>>e;
+                  s= a+" "+ b +" "+ c +" "+ d +" "+ e;
                   ifstream fin;
                   string line;
                   int offset=0;
@@ -1492,7 +1498,7 @@ int Login()
             cout<<"ENTER YOUR PASSWORD"<<endl;
             cin>>w;
             
-            q= q+" "+ w;s
+            q= q+" "+ w;
             fin.open("myfile.txt");
             if(fin.is_open())
             {
@@ -1527,7 +1533,7 @@ int Login()
             cin>>q;
             cout<<"ENTER PASSWORD"<<endl;
             cin>>w;
-            q=q+w;
+            q=q+" "+ w;
             fin.open("admin.txt");
             if(fin.is_open())
             {
