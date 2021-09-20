@@ -1452,7 +1452,7 @@ int Login()
       if(x==1)
       {
                   ofstream fout;
-                  cout<<"ENTER YOUR NAME"<<endl;
+                  cout<<"ENTER YOUR USER NAME"<<endl;
                   cin>>s;
                   cout<<"ENTER YOUR PASSWORD"<<endl;
                   cin>>p;
