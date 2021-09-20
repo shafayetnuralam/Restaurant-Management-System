@@ -719,8 +719,10 @@ void product::modifydata(int n1,char snm[15],char companynm[15],int q)
 }
 // Global declaration for stream object
 fstream fp;
+
 // Class function outside
 product pr;
+
 // Function to write product details in file
 void write_book()
 {
@@ -884,6 +886,7 @@ void place_order()
                   cust_menu1();
       }
 }
+
 //FUNCTION TO DISPLAY ALL THE PRODUCTS IN TABULAR FORM
 void prod_tabular()
 {
@@ -898,6 +901,7 @@ void prod_tabular()
             return;
       }
       product_detail_heading();
+
       while(inFile.read((char *) &st, sizeof(product)))
       {
             if(r<=12)
@@ -1144,7 +1148,7 @@ void intro()
       cout<<"***************************   S Y S T E M   *****************************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"PROJECT BUILT BY : "<<endl;
-      cout<<"Shafayet And his Team"<<endl;
+      cout<<"Shafayet And His Team"<<endl;
       cout<<endl;
       cout<<"========================================================================="<<endl;
       cin.get();
