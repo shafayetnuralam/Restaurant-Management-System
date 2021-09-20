@@ -1491,7 +1491,8 @@ int Login()
             cin>>q;
             cout<<"ENTER YOUR PASSWORD"<<endl;
             cin>>w;
-            q=q+w;
+            
+            q= q+" "+ w;s
             fin.open("myfile.txt");
             if(fin.is_open())
             {
