@@ -1194,7 +1194,7 @@ void customer_menu()
                   customer_menu();
                   break;
             case '6':
-                  administratormenu();
+                  mainMenu();
                   break;
             default:
                   cout<<"Please enter valid option"<<endl;
@@ -1335,7 +1335,7 @@ void cust_menu3()
                   cust_menu2();
                   break;
             case '2':
-                  administratormenu();
+                  mainMenu();
                   break;
             case '3':
                   orderk=0;
@@ -1427,7 +1427,7 @@ void administratormenu()
                               product_menu();
                               break;
                         case '3':
-                              administratormenu();
+                              mainMenu();
                               break;
                         default :
                               cout<<"Please enter valid option"<<endl;

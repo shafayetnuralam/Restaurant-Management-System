@@ -161,9 +161,9 @@ int main()
 }
 	else if(option==3)
 	 {
-		cout<<"\n1  "<<sandwich_1<<" P240.00"<<"\n";
-		cout<<"2  "<<sandwich_2<<" P160.00"<<"\n";
-		cout<<"3  "<<sandwich_3<<" P100.00"<<"\n";
+		cout<<"\n1  "<<sandwich_1<<" 240.00"<<"\n";
+		cout<<"2  "<<sandwich_2<<" 160.00"<<"\n";
+		cout<<"3  "<<sandwich_3<<" 100.00"<<"\n";
 		//cout<<"4 "<<pizza4<<"\n";
 		cout<<"\nPlease Enter which Sandwich you would like to have?:";
 		cin>>pizzaoption1;
