@@ -69,14 +69,14 @@ public:
       void cust_input(int custid)
       {
             cout<<"-------------------------------------------------------------------------"<<endl;
-            cout<<"CUSTOMER NO: ";
+            cout<<"CUSTOMER NO     : ";
             cust_id=custid;
             cout<<cust_id<<endl;
             cout<<"NAME OF CUSTOMER:"<<endl;
             cin>>cname;
-            cout<<"ADDRESS:"<<endl;
+            cout<<"ADDRESS         :"<<endl;
             cin>>address;
-            cout<<"PHONE NO.:"<<endl;
+            cout<<"PHONE NO.       :"<<endl;
             cin>>phno;
             cout<<"-------------------------------------------------------------------------"<<endl;
       }
@@ -90,8 +90,8 @@ public:
              cout<<"-------------------------------------------------------------------------"<<endl;
              cout<<"CUSTOMER NO      : "<<cust_id<<endl;
              cout<<"NAME OF CUSTOMER : "<<cname<<endl;
-             cout<<"ADDRESS    : "<<address<<endl;
-             cout<<"PHONE NO.  : "<<phno<<endl;
+             cout<<"ADDRESS          : "<<address<<endl;
+             cout<<"PHONE NO.        : "<<phno<<endl;
              cout<<"-------------------------------------------------------------------------"<<endl;
       }
 };
@@ -516,18 +516,18 @@ class product
       void create_prod(int rn1)
       {
              cout<<"-------------------------------------------------------------------------"<<endl;
-             cout<<"PRODUCT NO: ";
+             cout<<"PRODUCT NO      : ";
              prodid=rn1;
              cout<<prodid<<endl;
-             cout<<"NAME OF PRODUCT:"<<endl;
+             cout<<"NAME OF PRODUCT :"<<endl;
              cin>>name;
-             cout<<"COMPANY:"<<endl;
+             cout<<"COMPANY         :"<<endl;
              cin>>company;
-             cout<<"PRODUCT PRICE:"<<endl;
+             cout<<"PRODUCT PRICE   :"<<endl;
              cin>>price;
-             cout<<"QUANTITY:"<<endl;
+             cout<<"QUANTITY        :"<<endl;
              cin>>qty;
-             cout<<"DISCOUNT%:"<<endl;
+             cout<<"DISCOUNT%       :"<<endl;
              cin>>dis;
              cout<<"-------------------------------------------------------------------------"<<endl;
       }
@@ -538,7 +538,7 @@ class product
              cout<<"NAME OF PRODUCT       : "<<name<<endl;
              cout<<"COMPANY               : "<<company<<endl;
              cout<<"PRODUCT PRICE         : "<<price<<endl;
-             cout<<"QUANTITY        : "<<qty<<endl;
+             cout<<"QUANTITY              : "<<qty<<endl;
              cout<<"DISCOUNT%             : "<<dis<<"%"<<endl;
              cout<<"-------------------------------------------------------------------------"<<endl;
        }
@@ -582,11 +582,11 @@ void product::modifydata(int n1,char snm[15],char companynm[15],int q)
 {
       char tmpnm[40],tmpnm2[40];
       char yes1,yes2;
-       cout<<"PRODUCT NO: ";
+       cout<<"PRODUCT NO      : ";
        prodid=n1;
        cout<<prodid<<endl;
        strcpy(name,snm);
-       cout<<"NAME OF PRODUCT:"<<endl;
+       cout<<"NAME OF PRODUCT :"<<endl;
        cout<<name<<endl;
        cout<<"Want to change the name of product ? (Yes[ y or Y ] or NO [n or N])"<<endl;
        int flag=0;
@@ -1144,7 +1144,7 @@ void intro()
       cout<<"***************************   S Y S T E M   *****************************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"PROJECT BUILT BY : "<<endl;
-      cout<<"Shafayet"<<endl;
+      cout<<"Shafayet And his Team"<<endl;
       cout<<endl;
       cout<<"========================================================================="<<endl;
       cin.get();
