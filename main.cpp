@@ -1148,8 +1148,8 @@ void intro()
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"***************************   S Y S T E M   *****************************"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
-      cout<<"PROJECT BUILT BY : "<<endl;
-      cout<<"Shafayet And His Team"<<endl;
+      // cout<<"PROJECT BUILT BY : "<<endl;
+      // cout<<"Shafayet And His Team"<<endl;
       cout<<endl;
       cout<<"========================================================================="<<endl;
       cin.get();
@@ -1452,7 +1452,6 @@ int Login()
       cout<<"3.ADMIN"<<endl;
       cout<<"4.EXIT"<<endl;
 
-      cout<<"********* USERNAME LOGIN ***********"<<endl;
       
       string p,q,w,a,b,c,d,e;
       int x;string s;
@@ -1491,6 +1490,7 @@ int Login()
                               }
                         }
                   }
+
                   fin.close();
                   fout.open("myfile.txt",ios::app);
                   fout<<s+"\n";
@@ -1498,6 +1498,7 @@ int Login()
                   goto label;
       }
       else if(x==2){
+
             string line;
             ifstream fin;
             int offset=0;
