@@ -1388,7 +1388,7 @@ void cust_order()
 	char 
       fullname[30], 
      
-            piz1[]="Chicken Fazita" ,
+            piz1[]="Chicken Fajita" ,
             piz2[]="Chicken Bar BQ" ,
             piz3[]="Peri Peri" ,
             piz4[]="Creamy Max", 
