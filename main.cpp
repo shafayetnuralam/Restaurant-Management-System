@@ -1358,7 +1358,7 @@ void mainMenu(){
       {
                   cout<<endl;
                   cout<<"-------------------------------------------------------------------------"<<endl;
-                  cout<<"*********   RESTURENT MANEGMENT SYSTEM   ***********"<<endl;
+                  cout<<"*********   RESTAURANT MANAGEMENT SYSTEM   ***********"<<endl;
                   cout<<"-------------------------------------------------------------------------"<<endl;
                   cout<<endl;
             cout<<"=============================   MAIN MENU   ============================"<<endl;
@@ -1412,7 +1412,7 @@ void cust_order()
 	system("cls");
                   cout<<endl;
                   cout<<"-------------------------------------------------------------------------"<<endl;
-                  cout<<"*********   RESTURENT MANEGMENT SYSTEM   ***********"<<endl;
+                  cout<<"*********   RESTAURANT MANAGEMENT SYSTEM   ***********"<<endl;
                   cout<<"-------------------------------------------------------------------------"<<endl;
                   cout<<endl;
 
@@ -1465,7 +1465,7 @@ int Login()
       label:
       cout<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
-      cout<<"*********   RESTURENT MANEGMENT SYSTEM  ***********"<<endl;
+      cout<<"*********   RESTAURANT MANAGEMENT SYSTEM  ***********"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<endl;
       cout<<"1.REGISTER"<<endl;

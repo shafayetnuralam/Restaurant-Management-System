@@ -10,7 +10,7 @@ int main()
 	starting:
 	system("cls");
 	cout<<"\t\t\t|-------------------------------------------------------|\n";
-	cout<<"\t\t\t|             RESTURENT MANEGMENT SYSTEM      |\n";
+    cout<<"*********   RESTAURANT MANAGEMENT SYSTEM   ***********"<<endl;
 	cout<<"\t\t\t|-------------------------------------------------------|\n\n";
 	cout<<"Please Enter Your Name: ";
 	cin.getline(fullname, 20);
