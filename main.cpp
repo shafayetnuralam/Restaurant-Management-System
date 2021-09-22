@@ -1385,10 +1385,29 @@ void mainMenu(){
 //Order Foodr menu function
 void cust_order()
 {
-	char fullname[30], piz1[]="Chicken Fazita" ,piz2[]="Chicken Bar BQ" ,piz3[]="Peri Peri" ,piz4[]="Creamy Max", drinks1[]="Mountain Dew", drinks2[]="Coca Cola", drinks3[]="Royal",burger_1[]="Zinger Burger",burger_2[]="Chicken Burger",burger_3[]="Beef Burger";
+	char 
+      fullname[30], 
+     
+            piz1[]="Chicken Fazita" ,
+            piz2[]="Chicken Bar BQ" ,
+            piz3[]="Peri Peri" ,
+            piz4[]="Creamy Max", 
+            drinks1[]="Mountain Dew", 
+            drinks2[]="Coca Cola", 
+            drinks3[]="Royal",
+            burger_1[]="Zinger Burger",
+            burger_2[]="Chicken Burger",
+            burger_3[]="Beef Burger";
+
 	char sandwich_1[]="Club Sandwich", sandwich_2[]="Chicken Crispy Sandwich", sandwich_3[]="Extream Veg Sandwich";
-	char fried1[]="Chicken Fried", fried2[]="Prawn Fried", fried3[]="Beef Fried",gotobeginning ;
+
+	char fried1[]="Chicken Fried", 
+           fried2[]="Prawn Fried", 
+           fried3[]="Beef Fried",
+           gotobeginning ;
+
 	int option=0,pizzaoption,pizzaoption1, qty;// time=40;
+
 	starting:
 	system("cls");
                   cout<<endl;
@@ -1398,10 +1417,12 @@ void cust_order()
                   cout<<endl;
 
 	cout<<"Please Enter Your Name: ";
+
 	cin.getline(fullname, 20);
 	cout<<"Hello "<<fullname<<"\n\nWhat would you like to order?\n\n";
 
        prod_tabular();
+
 	cout<<"[Choice 1] Pizzas\n";
 	cout<<"\nPlease Enter your Choice: ";
 	cin>>option;
