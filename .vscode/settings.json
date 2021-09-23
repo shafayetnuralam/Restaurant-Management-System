@@ -9,5 +9,6 @@
         "iomanip": "cpp",
         "random": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "cSpell.language": "en,en-US"
 }
