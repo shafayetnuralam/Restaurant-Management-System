@@ -1,5 +1,1 @@
-
-faisal 123 01535 24 cashier
-khalid 123 015 10 test
-rakib 123 015 25 test
-shafayet 123 019 10 10
+faisal 123 123 10 casier

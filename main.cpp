@@ -9,6 +9,7 @@
 #include<sstream>
 #include<typeinfo>
 #include <cmath>
+#include <conio.h>
 using namespace std;
 struct order
 {
@@ -178,7 +179,7 @@ void customer::modifycust_data(int n1,char nm[15],char add[15],char q[15])
             strcpy(phno,tmpnm3);
       }
       if((yes3== 'Y' || yes3== 'y') || (yes2== 'Y' || yes2== 'y') || (yes1== 'Y' || yes1== 'y'))
-            cout<<"*********************   NEW CUSTOMER RECORD SAVED   **********************"<<endl;
+            cout<<"*********************   NEW CUSTOMER RECORD SAVED   >   Please Enter to continue **********************"<<endl;
       else
             cout<<"********************   NO CUSTOMER RECORD CHANGED   **********************"<<endl;
 }
@@ -291,7 +292,7 @@ void customer_detail_heading()
       cout<<"========================================================================="<<endl;
       cout<<"   ************************  CUSTOMER DETAILS  **********************    "<<endl;
       cout<<"========================================================================="<<endl;
-      cout<<"CUST.NO"<<setw(13)<<"NAME"<<setw(23)<<"ADDRESS"<<setw(27)<<"PHONE NO"<<endl;
+      cout<<"CUST.NO"<<setw(12)<<"NAME"<<setw(22)<<"ADDRESS"<<setw(25)<<"PHONE NO"<<endl;
       cout<<"-------------------------------------------------------------------------"<<endl;
 }
 //FUNCTION TO MODIFY customer RECORD
@@ -474,6 +475,8 @@ int before_order()
 {
       int f=-1,num=0;
       customer cust;
+
+      cust_tabular();
       cout<<"ENTER THE CUSTOMER ID TO BILL:"<<endl;
       cin>>num;
       ifstream inFile;
@@ -849,7 +852,6 @@ void place_order()
              yy++;
              cout<<"\n		  TOTAL AMOUNT     :   "<<"Tk."<<total<<endl;
              yy++;
-            //  cout<<"		  CGST             :   "<<"+"<<ttaxt/2<<"%"<<endl;
              cout<<"		  Vat             :   "<<"+"<<ttaxt/2<<"%"<<endl;
              yy++;
              cout<<"-------------------------------------------------------------------------"<<endl;
@@ -929,7 +931,7 @@ void product_detail_heading()
       cout<<"========================================================================"<<endl;
       cout<<"*************************   PRODUCTS DETAILS   *************************"<<endl;
       cout<<"========================================================================"<<endl;
-      cout<<"PROD.NO"<<setw(15)<<"NAME"<<setw(15)<<"COMPANY"<<setw(15)<<"PRICE"<<setw(15)<<"QUANTITY"<<setw(15)<<"DISCOUNT"<<endl;
+      cout<<"PROD.NO"<<setw(10)<<"NAME"<<setw(15)<<"COMPANY"<<setw(12)<<"PRICE"<<setw(12)<<"QUANTITY"<<setw(12)<<"DISCOUNT"<<endl;
       cout<<"------------------------------------------------------------------------"<<endl;
 }
 //FUNCTION TO MODIFY RECORD
@@ -1151,7 +1153,7 @@ void intro()
       // cout<<"PROJECT BUILT BY : "<<endl;
       // cout<<"Shafayet And His Team"<<endl;
       cout<<endl;
-      cout<<"========================================================================="<<endl;
+       // cout<<"============================Please enter valid option================================"<<endl;
       cin.get();
 }
 // Customer Menu Function
@@ -1226,7 +1228,8 @@ void product_menu()
                   product_menu();
                   break;
             case '2':
-                  prod_tabular();//product_detail_heading();
+                  prod_tabular();
+                  //product_detail_heading();
                   product_menu();
                   break;
             case '3':
@@ -1301,7 +1304,6 @@ void cust_menu2()
       cout<<"-------------------------------------------------------------------------"<<endl;
       cout<<"1.CREATE NEW CUSTOMER DETAIL"<<endl;
       cout<<"2.BACK TO MAIN MENU"<<endl;
-      cout<<"3.CONTINUE TO BILL\n"<<endl;
       cout<<"Please Enter Your Choice (1-3) "<<endl;
       cin>>ch2;
       switch(ch2)
@@ -1363,72 +1365,40 @@ void mainMenu(){
                   cout<<endl;
             cout<<"=============================   MAIN MENU   ============================"<<endl;
             cout<<"1. ORDER"<<endl;
-            cout<<"2. EXIT"<<endl;
+            cout<<"2. CREATE NEW CUSTOMER DETAIL"<<endl;
+            cout<<"3. DISPLAY ALL CUSTOMERS DETAILS"<<endl;
+            cout<<"4. DISPLAY ALL PRODUCTS AVAILABLE"<<endl;
+            cout<<"5. EXIT"<<endl;
             cout<<"========================================================================"<<endl;
-            cout<<"Please Select Your Option (1-2) "<<endl;
+            cout<<"Please Select Your Option (1-5) "<<endl;
             cin>>ch;
             switch(ch)
             {
-                  case '1':
-                        cust_order();
-            
+                 case '1':
+                        place_order();
                         break;
-      
                   case '2':
+                        write_customer1();
+                        break;
+                  case '3':
+                        cust_tabular();
+                        cust_menu2();
+                        break;
+
+                  case '4':
+                        prod_tabular();
+                        //product_detail_heading();
+                        // product_menu();
+                        break;
+
+                  case '5':
                         exit(0);
                   default :
                         cout<<"Please enter valid option"<<endl;
             }
-      }while(ch!='2');
+      }while(ch!='5');
     }
 
-//Order Foodr menu function
-void cust_order()
-{
-	char 
-      fullname[30], 
-     
-            piz1[]="Chicken Fajita" ,
-            piz2[]="Chicken Bar BQ" ,
-            piz3[]="Peri Peri" ,
-            piz4[]="Creamy Max", 
-            drinks1[]="Mountain Dew", 
-            drinks2[]="Coca Cola", 
-            drinks3[]="Royal",
-            burger_1[]="Zinger Burger",
-            burger_2[]="Chicken Burger",
-            burger_3[]="Beef Burger";
-
-	char sandwich_1[]="Club Sandwich", sandwich_2[]="Chicken Crispy Sandwich", sandwich_3[]="Extream Veg Sandwich";
-
-	char fried1[]="Chicken Fried", 
-           fried2[]="Prawn Fried", 
-           fried3[]="Beef Fried",
-           gotobeginning ;
-
-	int option=0,pizzaoption,pizzaoption1, qty;// time=40;
-
-	starting:
-	system("cls");
-                  cout<<endl;
-                  cout<<"-------------------------------------------------------------------------"<<endl;
-                  cout<<"*********   RESTAURANT MANAGEMENT SYSTEM   ***********"<<endl;
-                  cout<<"-------------------------------------------------------------------------"<<endl;
-                  cout<<endl;
-
-	cout<<"Please Enter Your Name: ";
-
-	cin.getline(fullname, 20);
-	cout<<"Hello "<<fullname<<"\n\nWhat would you like to order?\n\n";
-
-       prod_tabular();
-
-	cout<<"[Choice 1] Pizzas\n";
-	cout<<"\nPlease Enter your Choice: ";
-	cin>>option;
-
-	
-}
 
 // Administrator menu function
 void administratormenu()
@@ -1473,9 +1443,10 @@ int Login()
       cout<<"3.ADMIN"<<endl;
       cout<<"4.EXIT"<<endl;
 
-      
+
       string p,q,w,a,b,c,d,e;
       int x;string s;
+      double mobileNumber;
       cin>>x;
       if(x==1)
       {
@@ -1484,8 +1455,16 @@ int Login()
                   cin>>a;
                   cout<<"ENTER YOUR PASSWORD :";
                   cin>>b;
-                  cout<<"ENTER YOUR Mobile No :";
+                  cout<<"ENTER YOUR MOBILE NO :";
                   cin>>c;
+                  
+
+                  if (mobileNumber < 1000000000 || mobileNumber > 9999999999)
+                  {
+                  printf("\n Please enter only 11 digits Number... \n");
+                   Login();
+                  }
+
                   cout<<"ENTER YOUR Age :";
                   cin>>d;
                   cout<<"ENTER YOUR Designation :";
@@ -1522,14 +1501,32 @@ int Login()
 
             string line;
             ifstream fin;
+            int hidepass=0;
             int offset=0;
+            char password[128], c;
+ 
             cout<<"********* USERNAME LOGIN ***********"<<endl;
             cout<<"ENTER YOUR USERNAME : ";
             cin>>q;
             cout<<"ENTER YOUR PASSWORD :";
-            cin>>w;
+          
+            while((c = getch()) != 13){
+            if(hidepass < 0)
+            hidepass = 0;
+            /* 8 is ASCII value of BACKSPACE character */
+            if(c == 8){
+            putch('\b');
+            putch(NULL);
+            putch('\b');
+            hidepass--;
             
-            q= q+" "+ w;
+            }
+            password[hidepass++] = c;
+            putch('*');
+            }
+
+
+            q= q+" "+ password;
             fin.open("myfile.txt");
             if(fin.is_open())
             {
@@ -1545,9 +1542,11 @@ int Login()
                 }
                   }
                   if(offset==0)
-                  {
+                  { 
+                       
+                        cout<<""<<endl;
                         cout<<"Sorry, You are unauthorised!!"<<endl;
-                        cout<<"Press 1 and enter, to go to Home page"<<endl;
+                        cout<<"Press enter, to go to Home page"<<endl;
                         char o;
                         cin>>o;
                         goto label;
@@ -1559,12 +1558,29 @@ int Login()
       }   else if(x==3){
             string line;
             ifstream fin;
+            int hidepass=0;
             int offset=0;
-            cout<<"*********  ADMIN LOGIN  ***********"<<endl;
+            char password[128], c;
+ 
+            cout<<"********* ADMIN LOGIN ***********"<<endl;
             cout<<"ENTER ADMIN NAME : ";
             cin>>q;
-            cout<<"ENTER PASSWORD : ";
-            cin>>w;
+            cout<<"ENTER PASSWORD :";
+          
+            while((c = getch()) != 13){
+            if(hidepass < 0)
+            hidepass = 0;
+            /* 8 is ASCII value of BACKSPACE character */
+            if(c == 8){
+            putch('\b');
+            putch(NULL);
+            putch('\b');
+            hidepass--;
+            
+            }
+            password[hidepass++] = c;
+            putch('*');
+            }
             q=q+" "+ w;
             fin.open("admin.txt");
             if(fin.is_open())
@@ -1574,6 +1590,7 @@ int Login()
                         getline(fin,line);
                         if(line.find(q,0)!=-1)
                         {
+                              cout<<""<<endl;
                               cout<<"You are logged in !!"<<endl;
                               offset=1;
                                     administratormenu();
@@ -1582,8 +1599,9 @@ int Login()
                   }
                   if(offset==0)
                   {
+                        cout<<""<<endl;
                         cout<<"Sorry, You are unauthorised!!"<<endl;
-                        cout<<"Press 1 and enter, to go to Home page"<<endl;
+                        cout<<"Press enter, to go to Home page"<<endl;
                         char o;
                         cin>>o;
                         goto label;
@@ -1602,7 +1620,9 @@ int Login()
 // THE MAIN FUNCTION OF PROGRAM
 int main()
 {
+
       intro();
       Login();
+
       return 0;
 }
