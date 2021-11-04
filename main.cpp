@@ -1567,7 +1567,7 @@ int Login()
             cin>>q;
             cout<<"ENTER PASSWORD :";
           
-                while((c = getch()) != 13){
+            while((c = getch()) != 13){
             if(hidepass < 0)
             hidepass = 0;
             /* 8 is ASCII value of BACKSPACE character */
@@ -1581,8 +1581,6 @@ int Login()
             password[hidepass++] = c;
             putch('*');
             }
-
-
             q=q+" "+ w;
             fin.open("admin.txt");
             if(fin.is_open())
